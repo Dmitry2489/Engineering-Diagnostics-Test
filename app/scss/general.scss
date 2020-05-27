@@ -1,0 +1,171 @@
+@import "vars";
+@import "fonts";
+
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont, sans-serif;
+  font-size: 16px;
+  color: $second-color;
+}
+
+.container {
+  width: 1420px;
+  margin: 0 auto;
+  border-right: 1px solid rgba($color: $color-with, $alpha: 0.2);
+  border-left: 1px solid rgba($color: $color-with, $alpha: 0.2);
+  position: relative;
+  height: 100%;
+
+  // display: flex;
+  // flex-direction: column;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 33.7%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    background-color: rgba($color: $color-with, $alpha: 0.1);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 67.7%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    background-color: rgba($color: $color-with, $alpha: 0.1);
+  }
+}
+
+.btn {
+  padding: 28px 58px 27px 58px;
+  background-color: $main-color;
+  font-family: $titleFont;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000000;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+  &:hover{
+    background: #FFEB81;
+  }
+  &:hover::before{
+    display: block;
+    
+  }
+  
+
+  &::before {
+    content: "";
+    display: none;
+    position: absolute;
+    width: 80%;
+    height: 50px;
+    top: 71%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(40px);
+    background: #FEE040;
+    opacity: 0.7;
+    filter: blur(50px);
+    border-radius: 2px;
+  }
+
+  img {
+    margin-right: 7px;
+  }
+}
+
+.under__title {
+  font-family: $titleFont;
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: -0.5px;
+  color: $second-color;
+}
+
+.text__check+.text__check {
+  margin-top: 15px;
+}
+
+.text__check {
+  font-family: $priceFontConditions;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.5px;
+  color: $color-text-check;
+  align-items: center;
+  display: flex;
+
+  span {
+    opacity: 0.7;
+  }
+
+  img {
+    opacity: 1;
+    margin-right: 20px;
+  }
+}
+
+.section__title-inner {
+  text-align: center;
+
+  .section__subtitle {
+    font-family: 'Bebas Neue Bold';
+    font-size: 20px;
+    line-height: 16px;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    color: $main-color;
+    margin-bottom: 20px;
+  }
+
+  .section__title {
+    font-family: $titleFont;
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: -0.5px;
+
+  }
+}

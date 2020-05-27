@@ -15,11 +15,11 @@
     "gulp-autoprefixer": "^6.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "normalize.css": "^8.0.1"
   },
   "dependencies": {
+    "gulp-sass": "^4.1.0",
     "slick-carousel": "^1.8.1"
   }
 }
